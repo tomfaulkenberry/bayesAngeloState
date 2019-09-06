@@ -5,7 +5,7 @@ This repository contains materials for my workshop on Bayesian Statistics with J
 ## Materials
 - Workshop slides ([pdf](workshop.pdf))
 - [JASP software](http://jasp-stats.org)
-- Online Bayes factor [calculator](https://tomfaulkenberry.shinyapps.io/anovaBFcalc/) for ANOVA summaries
+- Online Bayes factor [calculator](https://tomfaulkenberry.shinyapps.io/anovaBFcalc/) for ANOVA summaries (see [Faulkenberry (2019)](https://psyarxiv.com/35wyv/) for description)
 
 ## Data sets 
 Each of the datasets below is formatted in CSV (comma separated value) format, which is the format required for JASP. You will want to download the files somewhere on your computer. Windows users should "right-click" on the CSV link. Mac users should "ctrl+click" on the CSV link. Alternatively, you can download a single ZIP archive of the files [here](https://raw.githubusercontent.com/tomfaulkenberry/bayesAngeloState/master/datasets.zip).
@@ -32,5 +32,8 @@ Is sleep related to grumpiness? More to the point -- is the baby's sleep related
 
 - raw data ([csv](https://raw.githubusercontent.com/tomfaulkenberry/bayesAngeloState/master/datasets/correlation.csv))
 - complete JASP file ([jasp](https://raw.githubusercontent.com/tomfaulkenberry/bayesAngeloState/master/datasets/correlation.jasp))
+
+## Example writeups
+Examples of how I would write the results of the analyses from the workshop can be found [here](writeups.pdf). More general guidelines (with JASP specific examples) are presented in [van Doorn et al. (2019)](https://psyarxiv.com/yqxfr/).
 
 

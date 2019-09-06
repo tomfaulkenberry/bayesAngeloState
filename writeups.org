@@ -1,0 +1,33 @@
+#+TITLE:
+#+AUTHOR:
+#+DATE:
+#+OPTIONS: toc:nil num:nil
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt]
+#+LATEX_HEADER: \usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \lhead{Example Bayesian Writeups}
+#+LATEX_HEADER: \rhead{Tom Faulkenberry (faulkenberry@tarleton.edu)}
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \parskip = 0.1in
+
+
+* 1. Example 1
+** Basic
+"We defined two models to describe our data: $\mathcal{H}_1$ states that mean grade for students who attend Anastasia's tutorials will not be equal to the mean grade for students who attend Bernadette's tutorials. On the other hand, $\mathcal{H}_0$ states that mean grades will be the same for both tutors. We then computed a Bayesian independent samples \(t\)-test (Rouder et al., 2009) to quantify the evidence for $\mathcal{H}_1$ over $\mathcal{H}_0$.  We found a Bayes factor of $B_{10}=1.76$, indicating that the observed data are approximately 1.76 times more likely under $\mathcal{H}_1$ than $\mathcal{H}_0$. According to to the recommendations of Jeffreys (1961), this constitutes /anecdotal/ evidence for $\mathcal{H}_1$ over $\mathcal{H}_0$."
+
+** Advanced
+"We defined two models to describe our data: $\mathcal{H}_1: \delta \neq 0$ states that mean grade for students who attend Anastasia's tutorials will not be equal to the mean grade for students who attend Bernadette's tutorials. On the other hand, $\mathcal{H}_0:\delta=0$ states that mean grades will be the same for both tutors. We then computed a Bayesian independent samples \(t\)-test (Rouder et al., 2009) to quantify the evidence for $\mathcal{H}_1$ over $\mathcal{H}_0$. This test requires the user to specify a prior distribution for effect size $\delta$, which we initially took at the default Cauchy prior with scale $r=0.707$. Using this prior, we found a Bayes factor of $B_{10}=1.76$, indicating that the observed data are approximately 1.76 times more likely under $\mathcal{H}_1$ than $\mathcal{H}_0$.  According to to the recommendations of Jeffreys (1961), this constitutes /anecdotal/ evidence for $\mathcal{H}_1$ over $\mathcal{H}_0$. Additionally, we performed a robustness check by varying the prior scale factor \(r\), each reflecting a different /a priori/ expectation of the effect of our manipulation. Generally, $B_{10}$ decreases as the scale factor \(r\) increases, but even using a very wide prior with $r=1.41$, the inference remains the same, as the data are only 1.32 times more likely under $\mathcal{H}_1$ than under $\mathcal{H}_0$."
+
+* 2. Example 2
+** Basic
+"We defined two models to describe our data: $\mathcal{H}_1$ states that the mean score on the second exam will be greater than the mean score on the first exam, whereas $\mathcal{H}_0$ states that the mean score will be equal on both exams. We then computed a Bayesian paired-samples samples \(t\)-test (Rouder et al., 2009) to quantify the evidence for $\mathcal{H}_1$ over $\mathcal{H}_0$.  We found a Bayes factor of $B_{10}=11983$, indicating that the observed data are approximately 12,000 times more likely under $\mathcal{H}_1$ than $\mathcal{H}_0$."
+
+** Advanced
+"We defined two models to describe our data: $\mathcal{H}_1:\delta>0$ states that the mean score on the second exam will be greater than the mean score on the first exam, whereas $\mathcal{H}_0:\delta=0$ states that the mean score will be equal on both exams. We then computed a Bayesian paired-samples \(t\)-test (Rouder et al., 2009) to quantify the evidence for $\mathcal{H}_1$ over $\mathcal{H}_0$. This test requires the user to specify a prior distribution for effect size $\delta$, which we initially took at the default Cauchy prior with scale $r=0.707$. Using this prior, we found a Bayes factor of $B_{10}=11983$, indicating that the observed data are approximately 12,000 times more likely under $\mathcal{H}_1$ than $\mathcal{H}_0$.  Additionally, we performed a robustness check by varying the prior scale factor \(r\), each reflecting a different /a priori/ expectation of the effect of our manipulation. $B_{10}$ remained large over a reasonable range of values of $r$, increasing to $B_{10}=13964 for $r=1$ and $B_{10}=14331$ for $r=1.41$. In all, these results indicate that our data is strongly evidential of $\mathcal{H}_1$ over $\mathcal{H}_0$."
+
+* References:
+
+1. Jeffreys, H. (1961). /Theory of Probability/ (3rd ed.). Oxford University Press.
+2. Rouder, J. N., Speckman, P. L., Sun, D., Morey, R. D., & Iverson, G. (2009). Bayesian t tests for accepting and rejecting the null hypothesis. /Psychonomic bulletin & review, 16/, 225-237.
+3. Rouder, J. N., Morey, R. D., Speckman, P. L., & Province, J. M. (2012). Default Bayes factors for ANOVA designs. /Journal of Mathematical Psychology, 56/, 356-374.
